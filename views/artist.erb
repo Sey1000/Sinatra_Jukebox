@@ -1,0 +1,16 @@
+<h2>
+	<%= @artists_cur[0][:artists_name] %>
+</h2>
+<ul>
+	<% @artists_cur.each do |albums_info| %>
+		<li>
+			<a href="/albums/
+				<%= albums_info[:album_id] %>
+			">
+				<%= albums_info[:albums_title] %>
+				-
+				<%= albums_info[:genres_name] %>
+			</a>	
+		</li>
+	<% end %>
+</ul>

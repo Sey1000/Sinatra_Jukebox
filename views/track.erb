@@ -1,0 +1,17 @@
+<h2>
+	<%= @tracks_cur[0][:tracks_name] %>
+	-
+	<%= @tracks_cur[0][:artists_name] %>
+</h2>
+
+<ul>
+	<% @tracks_cur.each do |track_info| %>
+		<li>
+			<%= track_info[:tracks_name] %>
+		</li>
+	<% end %>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/
+<%= @parser.give_me_url %>
+" frameborder="0" allowfullscreen></iframe>

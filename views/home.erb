@@ -1,0 +1,12 @@
+<h2>Artists</h2>
+<ul>
+	<% @cur.each do |artists_hash| %>
+		<li>
+			<a href="/artists/
+			<%= artists_hash[:id] %>
+			">
+				<%= artists_hash[:name] %>
+			</a>				
+		</li>
+	<% end %>
+</ul>
