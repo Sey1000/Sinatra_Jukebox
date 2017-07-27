@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<!-- Bootstrap -->
+  	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Jukebox</title>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Jukebox</h1>
-
-    <%= yield %>
+  	<nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Jukebox</a>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/Sey1000" target="_blank">CONTACT ME</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

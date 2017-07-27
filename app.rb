@@ -7,7 +7,10 @@ require_relative 'parser'
 DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/jukebox.sqlite'))
 
 get "/" do
-  @cur = DB.execute(%(SELECT * FROM artists ORDER BY name)).map do |arr|
+  @cur = DB.execute(%(SELECT * FROM artists
+    JOIN albums ON albums.artist_id = artists.id
+    GROUP BY artists.name
+    ORDER BY artists.name)).map do |arr|
     { id: arr[0], name: arr[1] }
   end
   erb :home
@@ -44,11 +47,11 @@ get "/tracks/:track_id" do
     WHERE tracks.id = #{params[:track_id]})).map do |arr|
     { tracks_name: arr[0], artists_name: arr[1], albums_title: arr[2] }
   end
-  # run scraper
   @parser = Parser.new(@tracks_cur[0])
   erb :track
 end
-# Then:
-# 1. Create an artist page with all the albums. Display genres as well
-# 2. Create an album pages with all the tracks
-# 3. Create a track page, and embed a Youtube video (you might need to hit Youtube API)
+
+not_found do
+  status 404
+  erb :noooo
+end
