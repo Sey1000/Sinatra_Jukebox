@@ -16,11 +16,7 @@ class Parser
     return /=(.*)/.match(ending)[1]
   end
 
-
-
   private
-
-
 
   def what_url
     "https://www.youtube.com/results?search_query=#{@track}+#{@artist}"
