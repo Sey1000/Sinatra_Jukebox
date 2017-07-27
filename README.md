@@ -1,6 +1,6 @@
 # Sinatra_Jukebox
 
-First attempt of using Sinatra framework.
+First attempt of using Sinatra framework. (Well, third attempt, first success!)
 You can use this to click through artist -> album -> track in the provided database, 
 and it embeds youtube video of the track on the track page.
 
