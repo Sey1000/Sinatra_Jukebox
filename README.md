@@ -6,8 +6,6 @@ and it embeds youtube video of the track on the track page.
 
 ## Getting Started
 
-Download the zip file
-
 ![Alt text](http://i.imgur.com/QD9jv6i.png)
 
 ### Prerequisites
