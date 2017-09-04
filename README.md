@@ -14,7 +14,7 @@ You probably need ruby environment ;)
 
 ### how to run
 
-In the unzipped folder
+In the folder
 
 ```
 bundle install
